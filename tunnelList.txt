@@ -5,4 +5,5 @@
 9881:osbserviceti.intranet:9881
 7200:soasso.intranet:7200
 7200:soasync01.telemar:7200
+7205:soapx06:7205
 8080:soaqos3.intranet:80
