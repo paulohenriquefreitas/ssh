@@ -8,20 +8,28 @@ then
 else
     sleep=5
 fi    
-echo $OSTYPE
+#echo $OSTYPE
 
-echo $PWD
-echo $sleep
+case "$OSTYPE" in
+  solaris*) echo "SOLARIS" ;;
+  darwin*)  echo "OSX" ;; 
+  linux*)   path=$PWD/tunnelList.txt;;
+  bsd*)     echo "BSD" ;;
+  msys*)    echo "WINDOWS" ;;
+  *)        echo "unknown: $OSTYPE" ;;
+esac
 
-for host in $(cat $PWD/tunnelList.txt); do
-    echo $host
+#echo $path
+#echo $sleep
+
+for host in $(cat $path ); do    
 	(sshpass -p "JkliuPh3" ssh -N -p 22 tr568073@mbchx03b -L $host) &
 done
 
 while true; do
     sleep $sleep    
 
-    for host in $(cat $PWD/tunnelList.txt)
+    for host in $(cat $path)
     do
     	if [ ! -z $host ]; then	
             r=$host	
