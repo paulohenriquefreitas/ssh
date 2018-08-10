@@ -23,7 +23,7 @@ esac
 #echo $sleep
 
 for host in $(cat $path ); do    
-	(sshpass -p "JkliuPh3" ssh -N  tr568073@mbchx03b -L $host) &
+	(echo "tinogomes" | sudo -S sshpass -p "JkliuPh3" ssh -N  tr568073@mbchx03b -L $host) &
 done
 
 while true; do
@@ -36,10 +36,10 @@ while true; do
             ntstat=`sudo netstat -lnp | grep ssh | grep :${r%%:*}`    
             if [ -z "$ntstat" ]
             then
-                (sshpass -p "JkliuPh3" ssh -N  tr568073@mbchx03b -L $host) &
+                (echo "tinogomes" | sudo -S  sshpass -p "JkliuPh3" ssh -N  tr568073@mbchx03b -L $host) &
                 echo "Reconnecting " $host
             else
-                echo $ntstat            
+                echo "Connected at " $ntstat            
             fi    
     	fi        
     done

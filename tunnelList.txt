@@ -1,9 +1,13 @@
 37201:soati8.intranet:37201
-80:soacc.intranet:80
 6379:mbchx04:6379
+6379:mbchx06b:6379
 8765:digdx01.interno:8765
 9881:osbserviceti.intranet:9881
 7200:soasso.intranet:7200
 7200:soasync01.telemar:7200
-7205:soapx06:7205
-8080:soaqos3.intranet:80
+7200:soacc.intranet:7200
+80:soatransicao.intranet:80
+27203:soapx50b:27203
+7207:soapx58b:7207
+80:soatransicao.intranet:80
+
